@@ -1,0 +1,75 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background: #020024;
+    background: linear-gradient(140deg, rgba(2, 0, 36, 0.86) 0%, rgba(9, 9, 121, 0.9) 39%, rgba(5, 104, 179, 1) 63%, rgba(2, 126, 221, 1) 84%, rgba(0, 212, 255, 1) 100%);
+    min-height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 200px;
+}
+.button{
+    padding: 5px 15px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #900c0c, #1d0030);
+    border: none;
+    outline: none;
+}
+.logo{
+    font-size: 27px;
+    font-weight: 550;
+    background: linear-gradient(to right, #9932CC, #FF69B4);
+    background-clip: text;
+    color: transparent;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.content h1{
+    font-size: 50px;
+}
+.content h1 span{
+    background: linear-gradient(to right, #9932CC, #FF69B4);
+    background-clip: text;
+    color: transparent;
+}
+
+.content p:nth-of-type(1){
+    /*or first of type */
+    font-size: 30px;
+    color: greenyellow;
+}
+.content p:nth-of-type(2){
+    font-size: 25px;
+    color: aqua;
+}
+.readMore{
+    background: transparent;
+    border: 1px solid #9932CC;
+}
