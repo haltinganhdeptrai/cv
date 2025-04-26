@@ -9,6 +9,8 @@ body{
     background: #020024;
     background: linear-gradient(140deg, rgba(2, 0, 36, 0.86) 0%, rgba(9, 9, 121, 0.9) 39%, rgba(5, 104, 179, 1) 63%, rgba(2, 126, 221, 1) 84%, rgba(0, 212, 255, 1) 100%);
     min-height: 100vh;
+    position: relative;
+    font-family: "Dancing Script", cursive;
 }
 header{
     display: flex;
@@ -24,6 +26,12 @@ nav a {
     text-decoration: none;
     color: white;
 }
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -35,6 +43,14 @@ nav a {
     background: linear-gradient(135deg, #900c0c, #1d0030);
     border: none;
     outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.bar{
+    display: none;
+    font-size: 30px;
+    color: #9e52d0;
+    cursor: pointer;
 }
 .logo{
     font-size: 27px;
@@ -49,6 +65,12 @@ main{
     justify-content: space-between;
     align-items: center;
     margin: 50px auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .content h1{
@@ -72,4 +94,45 @@ main{
 .readMore{
     background: transparent;
     border: 1px solid #9932CC;
+}
+.start:hover{
+    transform: translateY(-3px);
+    box-shadow: rgba(147, 240, 250, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
+
+@media only screen and (max-width: 1150.40px){
+    .container header nav, .container header .button{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+    main{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .content{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/* cach viet khac, cai tren tri tiet hon */
+/* @media (max-width: 1150.40px){
+    main{
+        display: none;
+    }
+} */
+
+@media (max-width: 750px){
+    .content h1{
+        white-space: nowrap;
+    }
+    /* .img_container img{
+        width height.... neu muon
+    } */
 }
